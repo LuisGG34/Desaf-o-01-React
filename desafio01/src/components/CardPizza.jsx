@@ -1,8 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye,faCartShopping } from '@fortawesome/free-solid-svg-icons';
-
-
+import { faEye,faCartShopping,faPizzaSlice } from '@fortawesome/free-solid-svg-icons';
 
 const CardPizza = ({ name, price, img, ingredientes }) => {
     return (
@@ -12,12 +10,12 @@ const CardPizza = ({ name, price, img, ingredientes }) => {
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>
             </div>
-            <h5 className="card-title">Ingredientes</h5>
+            <h5 className="fs-6 fw-light">Ingredientes:</h5>
             <ul className="list-group list-group-flush">
-                <li className="list-group-item">{ingredientes.join(', ')}</li>
-                <li className="list-group-item">Precio: ${price}</li>
+                <li className="list-group-item"><FontAwesomeIcon icon={faPizzaSlice}/> {ingredientes.join(', ')}</li>
+                <li className="list-group-item fs-4">Precio: ${price}</li>
             </ul>
-            <div className='dflex justify-content-evenly gap-1'>
+            <div className='grid gap-3 justify-content-around'>
             <button className="btn btn-secondary">
                 <FontAwesomeIcon icon={faEye} />
                 Ver Mas
