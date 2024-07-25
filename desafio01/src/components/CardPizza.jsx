@@ -1,4 +1,8 @@
-import React from "react";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye,faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const CardPizza = ({ name, price, img, ingredientes }) => {
     return (
@@ -13,8 +17,17 @@ const CardPizza = ({ name, price, img, ingredientes }) => {
                 <li className="list-group-item">{ingredientes.join(', ')}</li>
                 <li className="list-group-item">Precio: ${price}</li>
             </ul>
-            <button className="btn btn-secondary">Ver Mas</button>
-            <button className="btn btn-dark">Añadir</button>
+            <div className='dflex justify-content-evenly gap-1'>
+            <button className="btn btn-secondary">
+                <FontAwesomeIcon icon={faEye} />
+                Ver Mas
+                </button>
+            <button className="btn btn-dark">
+                <FontAwesomeIcon icon={faCartShopping} />
+                Añadir
+                </button>
+            </div>
+            
         </div>
         </>
     );
